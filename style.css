@@ -1,0 +1,48 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav li {
+    padding: 15px 20px;
+}
+
+/* Style the links */
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #ffcc00;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.profile-img {
+    max-width: 300px;
+    height: auto;
+    /*border-radius: 50%;*/
+    margin-bottom: 20px;
+}
