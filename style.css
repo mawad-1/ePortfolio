@@ -1,153 +1,147 @@
+/* 1. IMPORTS & GLOBAL SETUP */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Global Styles for All Pages */
+* {
+    box-sizing: border-box; /* Ensures padding doesn't break your layouts */
+}
+
 body {
-    font-family: 'Montserrat', sans-serif; /* Professional Font */
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f1f8f1; /* Light, soft green background */
-    color: #1a2a1a; /* Dark charcoal green text (cite: 8) */
-    text-align: center; /* CENTER ALL TEXT ON ALL PAGES */
+    background-color: #f1f8f1; /* Light soft green */
+    color: #1a2a1a;           /* Dark charcoal green */
+    text-align: center;       /* GLOBAL CENTER */
 }
 
-/* Base style for consistent buttons across the site */
-.btn, .btn-download {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2e7d32; /* Dark professional green */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
+/* Global Reset for Lists: Removes bullets and padding everywhere */
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Navigation Container */
+/* 2. NAVIGATION BAR (One Row, No Bullets) */
 nav {
-    background-color: #2e7d32; /* Dark professional green */
-    padding: 10px 0;
+    background-color: #2e7d32;
+    padding: 15px 0;
     width: 100%;
 }
 
-/* The List Wrapper */
 nav ul {
-    list-style-type: none;    /* REMOVES BULLET POINTS [cite: 8] */
-    margin: 0;
-    padding: 0;
-    display: flex;            /* PUTS ITEMS IN A STRAIGHT LINE */
-    justify-content: center;  /* CENTERS THE LINKS IN THE LINE */
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Modern way to space out items */
 }
 
-/* Individual Navigation Tabs */
-nav li {
-    margin: 0 20px;           /* Adds horizontal spacing between tabs [cite: 8] */
-}
-
-/* Styling the Links */
 nav a {
-    text-decoration: none;    /* Removes the default underline */
-    color: #f1f8f1;           /* Light green text for contrast */
-    font-weight: 700;         /* Uses the heavier weight of Montserrat */
+    text-decoration: none;
+    color: #f1f8f1;
+    font-weight: 700;
     font-size: 1.1rem;
-    transition: color 0.3s;   /* Smooth color change on hover */
+    transition: color 0.3s;
 }
 
-/* Hover effect to show interactivity [cite: 8] */
 nav a:hover {
-    color: #ffffff;           /* Turns white when hovered */
-    text-decoration: underline; 
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-/* Highlight the link for the page the user is currently on */
 nav a.active {
-    border-bottom: 2px solid #ffffff; /* Adds a clean underline to the active tab */
+    border-bottom: 2px solid #ffffff;
 }
 
-/* Home Page Hero Section */
+/* 3. HOME PAGE (Hero Section) */
 .hero-section {
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Horizontal Center */
-    justify-content: center; /* Vertical Center */
-    padding: 100px 20px; /* More spacing than other sections */
-    background-color: #f1f8f1; /* Light green background */
+    align-items: center; /* Ensures the column itself is centered */
 }
 
 .profile-img {
-    width: 450px; /* Prof's request: LARGER image (adjust as needed) */
-    height: 450px; /* Must be square to be a perfect circle */
-    object-fit: cover; /* Ensures the photo doesn't stretch */
-    border-radius: 50%; /* MAKES IT A CIRCLE (cite: 11) */
-    border: 5px solid #2e7d32; /* Optional: adds a nice dark green border */
-    margin-bottom: 30px;
+    width: 450px; 
+    height: 450px; 
+    object-fit: cover;
+    border-radius: 50%; /* Circle shape */
+    border: 5px solid #2e7d32;
+    margin: 0 auto 30px auto; /* Centers image and adds bottom spacing */
 }
 
-/* Projects Page Styling */
+/* 4. CONTENT CONTAINERS (Projects & About Narrative) */
 .content-container {
-    max-width: 800px; /* Keeps the text "chunked" and readable */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 .project-entry {
-    margin-bottom: 60px; /* Spacing between projects */
+    margin-bottom: 80px;
     display: flex;
-    flex-direction: column; /* Stack all project parts vertically */
-    align-items: center; /* Center everything within the stack */
+    flex-direction: column;
+    align-items: center; /* Centers all content in the project column */
 }
 
-/* Optional: Styling for a placeholder div if you don't have images yet */
-.image-placeholder {
+.project-entry img, .image-placeholder {
     width: 80%;
-    height: 300px;
-    background-color: #e0e0e0;
-    color: #555;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
-    margin-top: 20px;
+    margin: 20px auto; /* Centers the visuals */
+    border: 2px solid #2e7d32; 
 }
 
-/* This creates your 1-row, 3-column layout */
+/* 5. 3-COLUMN TABLE DESIGN (About & Resume) */
 .about-table-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns in 1 row */
-    gap: 20px; /* Space between the columns */
-    width: 90%;
-    margin: 30px auto;
-    background-color: #ffffff; /* White background to pop against the light green */
-    border: 1px solid #2e7d32; /* Subtle dark green border for professional ethos */
-    border-radius: 8px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 1 Row, 3 Columns */
+    gap: 10px;
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 1px solid #2e7d32;
+    border-radius: 12px;
+    padding: 30px;
 }
 
 .about-table-col {
-    padding: 15px;
-    /* Optional: adds a vertical line between columns for a "table" feel */
-    border-right: 1px solid #e0e0e0; 
+    padding: 0 15px;
+    border-right: 1px solid #e0e0e0;
 }
 
-/* Removes the border from the very last column */
 .about-table-col:last-child {
     border-right: none;
 }
 
-/* Ensures all text inside these columns is centered as you requested */
-.about-table-col h3, .about-table-col p {
-    text-align: center;
+/* 6. BUTTONS */
+.btn, .btn-download {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 20px auto;
 }
 
-.resume-section{
-    ul {
-        list-style-type: none; /* Removes bullets */
-        padding: 0;           /* Removes default left padding */
-        margin: 0;            /* Removes default margins */
-    }
+/* Container to hold the images in a line */
+.image-row {
+    display: flex;
+    justify-content: center; /* Centers the group of images */
+    gap: 15px;               /* Adds professional spacing between them */
+    margin: 20px auto;
+    width: 100%;
+    max-width: 900px;        /* Matches your content container width */
 }
 
-/* Removes bullet points from every list on all pages */
-li {
-    list-style-type: none;
+/* Specific styling for the images within that row */
+.image-row img {
+    width: 30%;              /* Makes them small enough to fit 3 in a row */
+    height: auto;            /* Keeps the aspect ratio perfect */
+    border-radius: 8px;      /* Rounded corners for a professional look */
+    border: 2px solid #2e7d32; /* Optional: adds your theme color as a border */
+    transition: transform 0.3s; /* Optional: smooth zoom effect when hovered */
 }
