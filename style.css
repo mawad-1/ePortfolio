@@ -145,3 +145,151 @@ nav a.active {
     border: 2px solid #2e7d32; /* Optional: adds your theme color as a border */
     transition: transform 0.3s; /* Optional: smooth zoom effect when hovered */
 }
+
+
+/* Container for the skill categories */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns in 1 row */
+    gap: 30px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: #ffffff; /* White box for contrast */
+    border: 1px solid #2e7d32; /* Consistent green border */
+    border-radius: 12px;
+    padding: 30px;
+}
+
+/* Individual category blocks */
+.skills-category {
+    padding: 10px;
+}
+
+.skills-category h3 {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+/* Ensure the skill items are centered and spaced out */
+.skills-category li {
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+/* 5. 3-COLUMN TABLE DESIGN (About & Resume) */
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1 Row, 3 Columns */
+    gap: 10px;
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 1px solid #2e7d32;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.table-col {
+    padding: 0 15px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.table-col:last-child {
+    border-right: none;
+}
+
+/* 5. 3-COLUMN TABLE DESIGN (About & Resume) */
+.experience-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1 Row, 3 Columns */
+    gap: 10px;
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 1px solid #2e7d32;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.experience-table-col {
+    padding: 0 15px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.experience-table-col:last-child {
+    border-right: none;
+}
+
+.experience-table-col h3 {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.education-card {
+    background-color: #ffffff;
+    border-left: 10px solid #2e7d32; /* A bold green vertical accent line */
+    padding: 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 0 12px 12px 0; /* Rounded on the right side only */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.major-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2e7d32;
+    margin: 5px 0;
+}
+
+.edu-details {
+    margin: 20px 0;
+}
+
+/* These "pills" make your GPA and programs pop visually [cite: 11] */
+.highlight-tag {
+    display: inline-block;
+    background-color: #f1f8f1;
+    border: 1px solid #2e7d32;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+.degree-breakdown {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Styling standard links within your content */
+a {
+    color: #2e7d32;           /* Use your professional dark green */
+    text-decoration: none;    /* Removes the default underline for a cleaner look */
+    font-weight: bold;        /* Makes them stand out in a paragraph */
+    transition: color 0.3s;   /* Smooth color change when hovering */
+}
+
+/* Hover effect for a professional ethos */
+a:hover {
+    color: #1b5e20;           /* A slightly darker green when hovered */
+    text-decoration: underline; /* Adds the underline back on hover for clarity */
+}
+
+/* Specific styling for the links in your navigation bar (to keep them readable) */
+nav a {
+    color: #f1f8f1;           /* Keeps nav links light against the dark green bar */
+}
+
+nav a:hover {
+    color: #ffffff;           /* Keeps nav links turning white on hover */
+}
