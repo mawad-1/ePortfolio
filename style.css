@@ -293,3 +293,32 @@ nav a {
 nav a:hover {
     color: #ffffff;           /* Keeps nav links turning white on hover */
 }
+
+/* 1. Tighten up the space after links/nav */
+nav {
+    margin-bottom: 0; /* Ensures no gap under the nav bar */
+}
+
+/* 2. Remove default margins from headers that push content away */
+h1, h2, h3 {
+    margin-top: 10px;    /* Reduced from browser default */
+    margin-bottom: 10px; /* Keeps text close to the section it describes */
+}
+
+/* 3. Fix the "content-container" spacing */
+.content-container {
+    padding-top: 10px;    /* Brings the "Overview" closer to the title */
+    padding-bottom: 10px;
+}
+
+/* 4. Fix the gap between sections */
+section {
+    margin-top: 0;
+    margin-bottom: 20px; /* Controlled spacing between blocks */
+}
+
+/* 5. Special fix for the Skills List */
+.skills-list {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
